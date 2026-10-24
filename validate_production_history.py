@@ -22,3 +22,8 @@ for idea in registry['ideas']:
   assert (root/'docs'/idea['script_page']).is_file()
 assert len(registry['ideas'])>=5
 print('PASS: weekly identity, Reels-only output, linked prior work and separate draft/produced/published states.')
+
+review=re.search(r'<select id="review">(.*?)</select>',page,re.S).group(1)
+assert re.search(r'<option value="all" selected>',review),"Full library must be the default"
+assert "$('review').value='all'" in page,"Reset must restore the full library"
+print("PASS: full library is visible by default and after reset.")
