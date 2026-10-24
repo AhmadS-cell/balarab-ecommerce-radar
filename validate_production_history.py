@@ -71,3 +71,17 @@ assert '<option value="tips">دفعة النصائح التعليمية الجد
 assert "get('review')==='tips'" in page
 assert "cleanURL.searchParams.delete('review')" in page
 print('PASS: direct teaching evidence, retained-but-hidden founder/case records, and new teaching collection.')
+
+# New short-tip collection never substitutes long lectures or loses prior production state.
+assert '<option value="shorttips">' in page
+assert "get('review')==='shorttips'" in page
+for id in audit['short_tips_batch_ids']:
+ r=lookup[id]
+ assert r['visibleEligible'] and r['teachingEligible'] and r['shortTipsBatch']
+ assert r['sourceFormat'] in ['reel','shorts'] and 0<r['durationSeconds']<=60
+ assert r['views']>=100000 and r['contentLanguage']=='en' and r['capturedAt']
+ assert r['animationVerified'] and r['visualSampleSeconds']==[3,18,32]
+ assert r['visualReviewAt'] and r['factCheckStatus']
+ assert 'selectedWeek' not in r and 'producedWeek' not in r
+assert lookup['DenaEc2ICUK']['relatedIdeaIds']==['BR-W001-02']
+print('PASS: new short merchant tips, dated high views, sampled animation evidence and no duplicate production.')

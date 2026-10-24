@@ -1,7 +1,7 @@
 {
-  "checked_at": "2026-10-24T12:28:54.191265+00:00",
-  "archived_total": 74,
-  "eligible_count": 47,
+  "checked_at": "2026-10-24T13:51:43.407461+00:00",
+  "archived_total": 78,
+  "eligible_count": 51,
   "hidden_count": 27,
   "retained_original_ids": [
     "Desit-9opB-",
@@ -79,10 +79,14 @@
     "sl-xcvWLhc8",
     "gJ9zHVxfe9M",
     "6PEqKZlNhfE",
-    "0BGanYasxn8"
+    "0BGanYasxn8",
+    "DemSR9LIf5Y",
+    "DeiYpgAobDa",
+    "Deh8C4Qof1g",
+    "DenaEc2ICUK"
   ],
   "language_counts": {
-    "en": 63,
+    "en": 67,
     "mixed": 6,
     "non_en": 0,
     "unknown": 5
@@ -241,5 +245,12 @@
   "visible_shorts_ids": [
     "VbQk-znqJCk",
     "zXnGEhTUMiU"
-  ]
+  ],
+  "short_tips_batch_ids": [
+    "DemSR9LIf5Y",
+    "DeiYpgAobDa",
+    "Deh8C4Qof1g",
+    "DenaEc2ICUK"
+  ],
+  "short_tips_policy": "New short-tip batch: English direct teaching, under60sec, >=100000 observed views, animation visually sampled; thresholds describe this batch, not a universal rule. No newly qualified YouTube Short in bounded search."
 }
