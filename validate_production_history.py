@@ -38,7 +38,7 @@ assert len(eligible)==audit['eligible_count']
 assert len(rows)==audit['archived_total']
 assert audit['hidden_count']==len(rows)-len(eligible)
 assert all(r.get('languageBasis') and r.get('eligibilityCheckedAt') for r in rows)
-assert 'const ELIGIBLE=REELS.filter(r=>r.visibleEligible===true)' in page
+assert 'const ELIGIBLE=REELS.filter(r=>r.visibleEligible===true&&r.teachingEligible===true)' in page
 assert 'visible=ELIGIBLE.filter(r=>' in page
 assert 'new Set(ELIGIBLE.map(r=>r.brand))' in page
 assert 'new Set(ELIGIBLE.map(r=>r.category))' in page
@@ -50,7 +50,8 @@ print('PASS: English and ecommerce eligibility, archive preservation and YouTube
 # Shorts are verified sources, with numeric dated observations and a dedicated filter.
 for id in audit['shorts_ids']:
  r=lookup[id]
- assert r['platform']=='youtube' and r['sourceFormat']=='shorts' and r['visibleEligible']
+ assert r['platform']=='youtube' and r['sourceFormat']=='shorts'
+ if r['visibleEligible']: assert r['teachingEligible']
  assert isinstance(r['views'],int) and r['views']>=0 and r['capturedAt']
  assert 0<r['durationSeconds']<=180
  assert r['url'].startswith('https://www.youtube.com/shorts/')
@@ -59,3 +60,14 @@ assert "$('format').value==='all'||r.sourceFormat===$('format').value" in page
 assert "['market','brand','platform','collection','format'].forEach" in page
 assert "new URLSearchParams(location.search).get('format')==='shorts'" in page
 print('PASS: Shorts format, dated view counts, direct filter and reset behavior.')
+
+# A source must itself teach the merchant; founder/case clips remain archived and hidden.
+assert all(r.get('teachingEligible') is True and r.get('merchantProblem') and r.get('sourceTakeaway') and r.get('sourceAction') for r in eligible)
+for id in ['IWaTcbTZJ6w','dY1RBYqT9MQ','xV8lunF9Dw8','313GvO3pScc','8ZCJwh6kSvs']:
+ assert id in lookup and not lookup[id]['visibleEligible'] and not lookup[id]['teachingEligible']
+for id in audit['teaching_batch_ids']:
+ assert lookup[id]['visibleEligible'] and lookup[id]['teachingEligible'] and lookup[id]['tipsBatch']
+assert '<option value="tips">دفعة النصائح التعليمية الجديدة</option>' in page
+assert "get('review')==='tips'" in page
+assert "cleanURL.searchParams.delete('review')" in page
+print('PASS: direct teaching evidence, retained-but-hidden founder/case records, and new teaching collection.')

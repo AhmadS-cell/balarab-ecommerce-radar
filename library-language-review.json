@@ -1,8 +1,8 @@
 {
-  "checked_at": "2026-10-24T10:27:28.952330+00:00",
-  "archived_total": 69,
+  "checked_at": "2026-10-24T12:28:54.191265+00:00",
+  "archived_total": 74,
   "eligible_count": 47,
-  "hidden_count": 22,
+  "hidden_count": 27,
   "retained_original_ids": [
     "Desit-9opB-",
     "Den_hKYlidR",
@@ -74,10 +74,15 @@
     "VbQk-znqJCk",
     "IWaTcbTZJ6w",
     "dY1RBYqT9MQ",
-    "zXnGEhTUMiU"
+    "zXnGEhTUMiU",
+    "kdTzkWhwmK8",
+    "sl-xcvWLhc8",
+    "gJ9zHVxfe9M",
+    "6PEqKZlNhfE",
+    "0BGanYasxn8"
   ],
   "language_counts": {
-    "en": 58,
+    "en": 63,
     "mixed": 6,
     "non_en": 0,
     "unknown": 5
@@ -192,12 +197,49 @@
       "id": "DelO18pA6x4",
       "reason": "ملاءمة ضعيفة للتجارة الإلكترونية",
       "detail": "عبارة تمهيدية فقط، بلا فكرة أو تعليم قابل للتطبيق."
+    },
+    {
+      "id": "xV8lunF9Dw8",
+      "reason": "المصدر لا يطابق طلب النصائح التعليمية المباشرة",
+      "detail": "زاوية تحليل بيانات شركات كبيرة؛ نفضل في هذه المكتبة درسًا محددًا قابلًا للتطبيق."
+    },
+    {
+      "id": "8ZCJwh6kSvs",
+      "reason": "المصدر لا يطابق طلب النصائح التعليمية المباشرة",
+      "detail": "زاوية بيع الشركة وأهداف المساهمين أوسع من النصائح التشغيلية المطلوبة لعملائنا."
+    },
+    {
+      "id": "313GvO3pScc",
+      "reason": "المصدر لا يطابق طلب النصائح التعليمية المباشرة",
+      "detail": "المرجع المختار عام وسياقه تجربة مؤسس. نحتاج مقطعًا محددًا يعلّم مهارة بعينها."
+    },
+    {
+      "id": "IWaTcbTZJ6w",
+      "reason": "المصدر لا يطابق طلب النصائح التعليمية المباشرة",
+      "detail": "مثال عن شركة كبيرة، دون خطوة تعليمية مباشرة لصاحب المتجر."
+    },
+    {
+      "id": "dY1RBYqT9MQ",
+      "reason": "المصدر لا يطابق طلب النصائح التعليمية المباشرة",
+      "detail": "سرد لتنظيم مخزون النشاط نفسه، وليس درسًا مباشرًا لصاحب متجر."
     }
   ],
   "shorts_ids": [
     "VbQk-znqJCk",
     "IWaTcbTZJ6w",
     "dY1RBYqT9MQ",
+    "zXnGEhTUMiU"
+  ],
+  "teaching_batch_ids": [
+    "kdTzkWhwmK8",
+    "sl-xcvWLhc8",
+    "gJ9zHVxfe9M",
+    "6PEqKZlNhfE",
+    "0BGanYasxn8"
+  ],
+  "teaching_policy": "The source itself must teach a useful merchant action, method, calculation or clear practical principle. Founder diaries and case-only clips are hidden.",
+  "visible_shorts_ids": [
+    "VbQk-znqJCk",
     "zXnGEhTUMiU"
   ]
 }
