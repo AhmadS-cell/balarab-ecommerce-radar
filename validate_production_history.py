@@ -46,3 +46,16 @@ assert 'https://www.youtube-nocookie.com/embed/' in page
 for id in ['DerYEm6Cn4f','DewhU2NqgZQ','DSkP5UODUZb','DZXwMw5Bo37','DeEAfmdhsHH','C8r1GHCSVKp']:
  assert not lookup[id]['visibleEligible'],'A reviewed non-English video became visible'
 print('PASS: English and ecommerce eligibility, archive preservation and YouTube preview support.')
+
+# Shorts are verified sources, with numeric dated observations and a dedicated filter.
+for id in audit['shorts_ids']:
+ r=lookup[id]
+ assert r['platform']=='youtube' and r['sourceFormat']=='shorts' and r['visibleEligible']
+ assert isinstance(r['views'],int) and r['views']>=0 and r['capturedAt']
+ assert 0<r['durationSeconds']<=180
+ assert r['url'].startswith('https://www.youtube.com/shorts/')
+assert '<option value="shorts">YouTube Shorts</option>' in page
+assert "$('format').value==='all'||r.sourceFormat===$('format').value" in page
+assert "['market','brand','platform','collection','format'].forEach" in page
+assert "new URLSearchParams(location.search).get('format')==='shorts'" in page
+print('PASS: Shorts format, dated view counts, direct filter and reset behavior.')

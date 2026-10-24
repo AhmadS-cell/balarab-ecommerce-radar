@@ -1,7 +1,7 @@
 {
-  "checked_at": "2026-10-24T10:12:47.079252+00:00",
-  "archived_total": 65,
-  "eligible_count": 43,
+  "checked_at": "2026-10-24T10:27:28.952330+00:00",
+  "archived_total": 69,
+  "eligible_count": 47,
   "hidden_count": 22,
   "retained_original_ids": [
     "Desit-9opB-",
@@ -70,10 +70,14 @@
     "313GvO3pScc",
     "-0YAZMzhWfI",
     "ysVBwUd2acs",
-    "B4-leQKO3IE"
+    "B4-leQKO3IE",
+    "VbQk-znqJCk",
+    "IWaTcbTZJ6w",
+    "dY1RBYqT9MQ",
+    "zXnGEhTUMiU"
   ],
   "language_counts": {
-    "en": 54,
+    "en": 58,
     "mixed": 6,
     "non_en": 0,
     "unknown": 5
@@ -189,5 +193,11 @@
       "reason": "ملاءمة ضعيفة للتجارة الإلكترونية",
       "detail": "عبارة تمهيدية فقط، بلا فكرة أو تعليم قابل للتطبيق."
     }
+  ],
+  "shorts_ids": [
+    "VbQk-znqJCk",
+    "IWaTcbTZJ6w",
+    "dY1RBYqT9MQ",
+    "zXnGEhTUMiU"
   ]
 }
