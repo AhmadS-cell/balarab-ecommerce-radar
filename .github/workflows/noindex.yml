@@ -9,3 +9,4 @@ jobs:
         with:
           python-version: '3.12'
       - run: python validate_noindex.py
+      - run: python validate_production_history.py
