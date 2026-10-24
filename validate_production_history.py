@@ -102,7 +102,7 @@ print('PASS: new non-decoy financial Shorts, actual visual style, dated views an
 # Company research is evidence-backed and never changes the existing production ledger.
 import statistics
 companies_data=json.loads(re.search(r'id="company-research-data">(.*?)</script>',page,re.S).group(1))
-assert len(companies_data['companies'])==12
+assert len(companies_data['companies'])==14
 assert companies_data['coverage']['native_youtube_shorts']==189
 assert len(audit['agency_batch_ids'])==6
 for c in companies_data['companies']:
@@ -123,3 +123,20 @@ for id in audit['agency_batch_ids']:
  assert not r['animationVerified']
 assert '<option value="agencies">' in page and "get('review')==='agencies'" in page
 print('PASS: company sample denominators, missing values, source exclusion, engagement formulas and no new production states.')
+
+# Owner-provided seeds are retained without trusting anomalous like counts or duplicating production.
+assert len(audit['seed_batch_ids'])==5
+for id in audit['seed_batch_ids']:
+ r=lookup[id]
+ assert r['seedBatch'] and r['animationVerified'] and r['visualSampleSeconds']==[3,18,32]
+ assert r['contentLanguage']=='en' and r['visibleEligible'] and r['teachingEligible']
+ assert not r.get('selectedWeek') and not r.get('producedWeek')
+ if r['author']=='advertizingly':
+  assert r['likes'] is None and r['rawReportedLikes']==3 and r['benchmark']['visible_er'] is None
+  assert r['metricsCaveat']
+assert 'CmD-QnWOTSA' in lookup['DeXEiZTTGWl']['relatedSourceIds']
+assert 'CmD-QnWOTSA' in lookup['DeFKrBSyYRJ']['relatedSourceIds']
+assert len([r for r in rows if r['id']=='Dd8J1LcSaTP'])==1
+assert len([r for r in rows if r['id']=='DeICJ7cTS--'])==1
+assert '<option value="seeds">' in page and "get('review')==='seeds'" in page
+print('PASS: owner seeds, sampled motion, uncertain engagement, deduplication and source links.')
