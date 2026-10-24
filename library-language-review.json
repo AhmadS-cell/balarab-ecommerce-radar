@@ -1,7 +1,7 @@
 {
-  "checked_at": "2026-10-24T13:51:43.407461+00:00",
-  "archived_total": 78,
-  "eligible_count": 51,
+  "checked_at": "2026-10-24T14:11:50.799745+00:00",
+  "archived_total": 80,
+  "eligible_count": 53,
   "hidden_count": 27,
   "retained_original_ids": [
     "Desit-9opB-",
@@ -83,10 +83,12 @@
     "DemSR9LIf5Y",
     "DeiYpgAobDa",
     "Deh8C4Qof1g",
-    "DenaEc2ICUK"
+    "DenaEc2ICUK",
+    "bOEUyr63h_k",
+    "mSKi5rxUKX0"
   ],
   "language_counts": {
-    "en": 67,
+    "en": 69,
     "mixed": 6,
     "non_en": 0,
     "unknown": 5
@@ -232,7 +234,9 @@
     "VbQk-znqJCk",
     "IWaTcbTZJ6w",
     "dY1RBYqT9MQ",
-    "zXnGEhTUMiU"
+    "zXnGEhTUMiU",
+    "bOEUyr63h_k",
+    "mSKi5rxUKX0"
   ],
   "teaching_batch_ids": [
     "kdTzkWhwmK8",
@@ -244,7 +248,9 @@
   "teaching_policy": "The source itself must teach a useful merchant action, method, calculation or clear practical principle. Founder diaries and case-only clips are hidden.",
   "visible_shorts_ids": [
     "VbQk-znqJCk",
-    "zXnGEhTUMiU"
+    "zXnGEhTUMiU",
+    "bOEUyr63h_k",
+    "mSKi5rxUKX0"
   ],
   "short_tips_batch_ids": [
     "DemSR9LIf5Y",
@@ -252,5 +258,10 @@
     "Deh8C4Qof1g",
     "DenaEc2ICUK"
   ],
-  "short_tips_policy": "New short-tip batch: English direct teaching, under60sec, >=100000 observed views, animation visually sampled; thresholds describe this batch, not a universal rule. No newly qualified YouTube Short in bounded search."
+  "short_tips_policy": "New short-tip batch: English direct teaching, under60sec, >=100000 observed views, animation visually sampled; thresholds describe this batch, not a universal rule. No newly qualified YouTube Short in bounded search.",
+  "operations_tips_batch_ids": [
+    "bOEUyr63h_k",
+    "mSKi5rxUKX0"
+  ],
+  "operations_tips_policy": "Two English native Shorts from2 non-decoy creators; direct financial teaching,39/51sec and >=100000 dated views. Practical Excel/paper demonstrations, not animation. No new high-view inventory clip qualified in the bounded sample."
 }

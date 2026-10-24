@@ -85,3 +85,16 @@ for id in audit['short_tips_batch_ids']:
  assert 'selectedWeek' not in r and 'producedWeek' not in r
 assert lookup['DenaEc2ICUK']['relatedIdeaIds']==['BR-W001-02']
 print('PASS: new short merchant tips, dated high views, sampled animation evidence and no duplicate production.')
+
+# The operations collection adds new creators without inventing animation or production.
+assert '<option value="operations">' in page and "get('review')==='operations'" in page
+assert len({lookup[id]['brand'] for id in audit['operations_tips_batch_ids']})>=2
+for id in audit['operations_tips_batch_ids']:
+ r=lookup[id]
+ assert r['platform']=='youtube' and r['sourceFormat']=='shorts' and r['operationsTipsBatch']
+ assert r['visibleEligible'] and r['teachingEligible'] and r['contentLanguage']=='en'
+ assert 0<r['durationSeconds']<=60 and r['views']>=100000 and r['capturedAt']
+ assert r['brand']!='decoyreport' and not r['animationVerified'] and r['visualStyle']
+ assert r['older'] and r['visualSampleSeconds'] and r['factCheckLinks']
+ assert not r.get('selectedWeek') and not r.get('producedWeek')
+print('PASS: new non-decoy financial Shorts, actual visual style, dated views and preserved production history.')
