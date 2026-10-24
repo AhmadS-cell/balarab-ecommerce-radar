@@ -1,7 +1,7 @@
 {
-  "checked_at": "2026-10-24T14:11:50.799745+00:00",
-  "archived_total": 80,
-  "eligible_count": 53,
+  "checked_at": "2026-10-24T14:58:32.742722+00:00",
+  "archived_total": 86,
+  "eligible_count": 59,
   "hidden_count": 27,
   "retained_original_ids": [
     "Desit-9opB-",
@@ -85,10 +85,16 @@
     "Deh8C4Qof1g",
     "DenaEc2ICUK",
     "bOEUyr63h_k",
-    "mSKi5rxUKX0"
+    "mSKi5rxUKX0",
+    "CqYeX-lr0Yk",
+    "DavfbB8pbsR",
+    "CmD-QnWOTSA",
+    "raqtQRRvW4s",
+    "k1w9EVZuM-c",
+    "DKDqUlK5yuY"
   ],
   "language_counts": {
-    "en": 69,
+    "en": 75,
     "mixed": 6,
     "non_en": 0,
     "unknown": 5
@@ -236,7 +242,11 @@
     "dY1RBYqT9MQ",
     "zXnGEhTUMiU",
     "bOEUyr63h_k",
-    "mSKi5rxUKX0"
+    "mSKi5rxUKX0",
+    "CmD-QnWOTSA",
+    "raqtQRRvW4s",
+    "k1w9EVZuM-c",
+    "DKDqUlK5yuY"
   ],
   "teaching_batch_ids": [
     "kdTzkWhwmK8",
@@ -250,7 +260,11 @@
     "VbQk-znqJCk",
     "zXnGEhTUMiU",
     "bOEUyr63h_k",
-    "mSKi5rxUKX0"
+    "mSKi5rxUKX0",
+    "CmD-QnWOTSA",
+    "raqtQRRvW4s",
+    "k1w9EVZuM-c",
+    "DKDqUlK5yuY"
   ],
   "short_tips_batch_ids": [
     "DemSR9LIf5Y",
@@ -263,5 +277,13 @@
     "bOEUyr63h_k",
     "mSKi5rxUKX0"
   ],
-  "operations_tips_policy": "Two English native Shorts from2 non-decoy creators; direct financial teaching,39/51sec and >=100000 dated views. Practical Excel/paper demonstrations, not animation. No new high-view inventory clip qualified in the bounded sample."
+  "operations_tips_policy": "Two English native Shorts from2 non-decoy creators; direct financial teaching,39/51sec and >=100000 dated views. Practical Excel/paper demonstrations, not animation. No new high-view inventory clip qualified in the bounded sample.",
+  "agency_batch_ids": [
+    "CqYeX-lr0Yk",
+    "DavfbB8pbsR",
+    "CmD-QnWOTSA",
+    "raqtQRRvW4s",
+    "k1w9EVZuM-c",
+    "DKDqUlK5yuY"
+  ]
 }

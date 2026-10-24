@@ -98,3 +98,28 @@ for id in audit['operations_tips_batch_ids']:
  assert r['older'] and r['visualSampleSeconds'] and r['factCheckLinks']
  assert not r.get('selectedWeek') and not r.get('producedWeek')
 print('PASS: new non-decoy financial Shorts, actual visual style, dated views and preserved production history.')
+
+# Company research is evidence-backed and never changes the existing production ledger.
+import statistics
+companies_data=json.loads(re.search(r'id="company-research-data">(.*?)</script>',page,re.S).group(1))
+assert len(companies_data['companies'])==12
+assert companies_data['coverage']['native_youtube_shorts']==189
+assert len(audit['agency_batch_ids'])==6
+for c in companies_data['companies']:
+ assert c['official_url'].startswith('https://') and c['reason_ar'] and c['limitations_ar']
+ for surface in ['instagram','youtube']:
+  st=c[surface];a=st['sample'];v=[x['views'] for x in a if x.get('views') is not None]
+  assert st['n']==len(a) and st['views_available']==len(v)
+  assert st['median_views']==(statistics.median(v) if v else None)
+for id in audit['agency_batch_ids']:
+ r=lookup[id];bm=r['benchmark']
+ assert r['agencyBatch'] and r['visibleEligible'] and r['teachingEligible'] and r['contentLanguage']=='en'
+ assert r['companyReason'] and r['benchmarkText'] and r['capturedAt'] and r['durationSeconds']<=120
+ assert not r.get('selectedWeek') and not r.get('producedWeek')
+ assert id not in bm['peer_ids'] and bm['peer_n']==len(bm['peer_ids'])
+ assert abs(bm['visible_er']-100*(r['likes']+r['comments'])/r['views'])<1e-9
+ if bm['views_ratio'] is not None:
+  assert bm['peer_n']>=5 and abs(bm['views_ratio']-r['views']/bm['peer_median_views'])<1e-9
+ assert not r['animationVerified']
+assert '<option value="agencies">' in page and "get('review')==='agencies'" in page
+print('PASS: company sample denominators, missing values, source exclusion, engagement formulas and no new production states.')
