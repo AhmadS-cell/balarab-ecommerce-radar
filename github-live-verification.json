@@ -1,0 +1,24 @@
+{
+  "checked_at": "2026-10-24T06:16:26.519254+00:00",
+  "results": [
+    {
+      "url": "https://ahmads-cell.github.io/balarab-ecommerce-radar/",
+      "status": 200,
+      "noindex": true,
+      "sha256": "6341762526940fad5ab79f7d6f54c93058bb45a9ea1ffc5d538550f954870945",
+      "matches_source_normalized_line_endings": true
+    },
+    {
+      "url": "https://ahmads-cell.github.io/balarab-ecommerce-radar/404.html",
+      "status": 200,
+      "noindex": true,
+      "sha256": "9fd3d6bd09b46737dc02355795442210145be4a4e6615ddd7c046e0093c14492"
+    },
+    {
+      "url": "https://ahmads-cell.github.io/balarab-ecommerce-radar/missing-radar-check",
+      "status": 404,
+      "noindex": true,
+      "sha256": "9fd3d6bd09b46737dc02355795442210145be4a4e6615ddd7c046e0093c14492"
+    }
+  ]
+}
