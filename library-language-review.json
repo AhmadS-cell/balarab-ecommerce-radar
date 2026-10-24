@@ -1,0 +1,193 @@
+{
+  "checked_at": "2026-10-24T10:12:47.079252+00:00",
+  "archived_total": 65,
+  "eligible_count": 43,
+  "hidden_count": 22,
+  "retained_original_ids": [
+    "Desit-9opB-",
+    "Den_hKYlidR",
+    "DemRQKyqQwJ",
+    "DeuG59YICo6",
+    "DesClKRIwDQ",
+    "DeraHuUoa_J",
+    "De1_VttobLm",
+    "DewjhEAolHU",
+    "DeupryDI-Z0",
+    "DevEHF1IzXU",
+    "Dezm1DXI76_",
+    "Dew5XCMO8mz",
+    "DerYEm6Cn4f",
+    "DeunCroOzES",
+    "Dez9XXqtUcr",
+    "DeznS2YO-_9",
+    "DewhU2NqgZQ",
+    "De0m3bGMLSD",
+    "De0LHMtM5C3",
+    "Dezz_fDNpJP",
+    "Deyv4_wNRer",
+    "De0EOtJtjWd",
+    "Dez0R90tYuJ",
+    "De00lovM7RR",
+    "De0tbkwteX1",
+    "Dez2eZBsGti",
+    "De0fsfaIEOq",
+    "De0Y2S3IBD2",
+    "DeoV1r7yC5f",
+    "DekuqC0IpMG",
+    "DefpY3hou6y",
+    "DeRzDazODdV",
+    "DekJrjRIp7d",
+    "DSIOKUdiMGA",
+    "DeZvqR7t9Fn",
+    "DSkP5UODUZb",
+    "DeUxS2iurvh",
+    "DZXwMw5Bo37",
+    "DeZark4O3kM",
+    "DecOrTqud49",
+    "C-QMq5ruv2b",
+    "C8r1GHCSVKp",
+    "DeEAfmdhsHH",
+    "DejxX2ZOSIV",
+    "Dd8J1LcSaTP",
+    "Dee8KhGhh_e",
+    "DeXEkG3OGwH",
+    "DdrbEbwt8GR",
+    "DejZzzNTE4h",
+    "DePXxpwOh_6",
+    "DeY6laLh8Ws",
+    "DeICJ7cTS--",
+    "DeY4JASNfy0",
+    "DcdXkmoskV0",
+    "DdQrjSnRhvO",
+    "DeZSEnABVvj",
+    "DbhoNacI6qv",
+    "DelO18pA6x4"
+  ],
+  "new_ids": [
+    "iK9w91L1klk",
+    "xV8lunF9Dw8",
+    "8ZCJwh6kSvs",
+    "313GvO3pScc",
+    "-0YAZMzhWfI",
+    "ysVBwUd2acs",
+    "B4-leQKO3IE"
+  ],
+  "language_counts": {
+    "en": 54,
+    "mixed": 6,
+    "non_en": 0,
+    "unknown": 5
+  },
+  "hidden": [
+    {
+      "id": "DemRQKyqQwJ",
+      "reason": "ملاءمة ضعيفة للتجارة الإلكترونية",
+      "detail": "مجرد قائمة مصطلحات بلا شرح أو قرار تجاري قابل للتطبيق."
+    },
+    {
+      "id": "DesClKRIwDQ",
+      "reason": "ملاءمة ضعيفة للتجارة الإلكترونية",
+      "detail": "تحليل لسياسات منصة ترفيهية، دون قرار مفيد مباشرة لمتجر."
+    },
+    {
+      "id": "DeraHuUoa_J",
+      "reason": "ملاءمة ضعيفة للتجارة الإلكترونية",
+      "detail": "محور المقطع خبر عن مراقبة الهاتف، وليس قراراً مفيداً للتاجر."
+    },
+    {
+      "id": "DerYEm6Cn4f",
+      "reason": "لغة غير إنجليزية أو مختلطة",
+      "detail": "شرح عملي لفحص الأحداث التلقائية ومنع تضخيم بيانات مشتريات المتجر."
+    },
+    {
+      "id": "DeunCroOzES",
+      "reason": "لغة غير متحققة",
+      "detail": "التفريغ غير متاح بسبب فشل المعالجة."
+    },
+    {
+      "id": "DeznS2YO-_9",
+      "reason": "ملاءمة ضعيفة للتجارة الإلكترونية",
+      "detail": "يركز على الثقة بمشاريع العملات المشفرة، خارج أولوية إدارة المتاجر."
+    },
+    {
+      "id": "DewhU2NqgZQ",
+      "reason": "لغة غير إنجليزية أو مختلطة",
+      "detail": "يتناول تدريب البكسل حسب الفئة، لكنه يخلط ذلك بالترويج لخدمة."
+    },
+    {
+      "id": "De00lovM7RR",
+      "reason": "ملاءمة ضعيفة للتجارة الإلكترونية",
+      "detail": "يركز أساساً على خبر الاستماع المزعوم للهاتف، لا على قرار متجر محدد."
+    },
+    {
+      "id": "DeoV1r7yC5f",
+      "reason": "ملاءمة ضعيفة للتجارة الإلكترونية",
+      "detail": "عرض ترويجي لخدمات إعداد تقنية دون تعليم مفيد في النص."
+    },
+    {
+      "id": "DeZvqR7t9Fn",
+      "reason": "ملاءمة ضعيفة للتجارة الإلكترونية",
+      "detail": "النص غير مفهوم ولا يقدم فكرة قابلة للاستخدام."
+    },
+    {
+      "id": "DSkP5UODUZb",
+      "reason": "لغة غير إنجليزية أو مختلطة",
+      "detail": "شرح إجرائي لربط بكسل ميتا بموقع المتجر وفحص عمله."
+    },
+    {
+      "id": "DeUxS2iurvh",
+      "reason": "لغة غير متحققة",
+      "detail": "التفريغ غير متاح بسبب فشل المعالجة."
+    },
+    {
+      "id": "DZXwMw5Bo37",
+      "reason": "لغة غير إنجليزية أو مختلطة",
+      "detail": "يشرح الشحن المجاني والتسعير المنتهي بتسعة وتجميع المنتجات عملياً."
+    },
+    {
+      "id": "C-QMq5ruv2b",
+      "reason": "ملاءمة ضعيفة للتجارة الإلكترونية",
+      "detail": "يقترح سعر مقارنة غير حقيقي؛ لا يناسب المراجع العملية التي نريد تحويلها."
+    },
+    {
+      "id": "C8r1GHCSVKp",
+      "reason": "لغة غير إنجليزية أو مختلطة",
+      "detail": "خطوات عملية لتثبيت بكسل ميتا على منصات التجارة الإلكترونية."
+    },
+    {
+      "id": "DeEAfmdhsHH",
+      "reason": "لغة غير إنجليزية أو مختلطة",
+      "detail": "يشرح أثر السعر المنتهي بتسعة على إدراك السعر لدى المشتري."
+    },
+    {
+      "id": "DejxX2ZOSIV",
+      "reason": "لغة غير متحققة",
+      "detail": "التفريغ غير متاح بسبب فشل المعالجة."
+    },
+    {
+      "id": "DeXEkG3OGwH",
+      "reason": "لغة غير متحققة",
+      "detail": "التفريغ غير متاح بسبب فشل المعالجة."
+    },
+    {
+      "id": "DdrbEbwt8GR",
+      "reason": "ملاءمة ضعيفة للتجارة الإلكترونية",
+      "detail": "يعالج ضعف المبيعات بتعميم عن حملات الوعي وCPM لا يكفي لاتخاذ قرار ربحي."
+    },
+    {
+      "id": "DejZzzNTE4h",
+      "reason": "ملاءمة ضعيفة للتجارة الإلكترونية",
+      "detail": "اقتراح عام مقتضب بلا توجيه كافٍ لقرار تاجر محدد."
+    },
+    {
+      "id": "DcdXkmoskV0",
+      "reason": "لغة غير متحققة",
+      "detail": "التفريغ غير متاح بسبب فشل المعالجة."
+    },
+    {
+      "id": "DelO18pA6x4",
+      "reason": "ملاءمة ضعيفة للتجارة الإلكترونية",
+      "detail": "عبارة تمهيدية فقط، بلا فكرة أو تعليم قابل للتطبيق."
+    }
+  ]
+}
