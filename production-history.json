@@ -18,8 +18,8 @@
       "idea_id": "BR-W001-01",
       "topic_key": "product-value-occasion",
       "title": "التموضع: القلم اليومي والقلم الفاخر",
-      "state": "script_draft",
-      "label": "سكربت التموضع، النسخة2للمراجعة",
+      "state": "youtube_scheduled_instagram_ready",
+      "label": "النسخة5معتمدة، إنستجرام جاهز ويوتيوب مجدول",
       "sheet_row": 49,
       "hook": "ليش عميلك يدفع أكثر على قلم؟",
       "brief": "ريل قصصي بمقارنة قلم يومي وقلم فاخر، ونفس العميل في استخدام مكتبي ثم اختيار هدية ترقية. يتغير سبب الاختيار، ثم نفهم التموضع: لمن المنتج، ومتى يحتاجه، ولماذا يفضله على البدائل. الوصف والصورة والتغليف والخدمة تثبت قيمة موجودة فعلًا. لا يختزل الريل إلى ترتيب الصفحة أو صفات المنتج. النسخة2نحو196كلمة، مسودة للمراجعة.",
@@ -54,9 +54,21 @@
           "version": 2,
           "week": 1,
           "basis": "تصحيح أحمد: تموضع وقصة مقارنة وفضول متجدد، بدل اختزال الفكرة إلى وصف قصير."
+        },
+        {
+          "at": "2026-10-25T07:12:53.737948+00:00",
+          "type": "production_status_reconciled",
+          "week": 1,
+          "basis": "approved version5, Instagram ready but not published, YouTube scheduled; verified against canonical ledger and live plan"
         }
       ],
-      "script_version": 2
+      "script_version": 5,
+      "approved": true,
+      "ready_for_publication": true,
+      "scheduled": true,
+      "published": false,
+      "duration_seconds": 104.07,
+      "youtube_schedule": "2026-12-03T19:00:00+03:00"
     },
     {
       "id": "DekuqC0IpMG",
@@ -208,7 +220,7 @@
       ]
     }
   ],
-  "updated_at": "2026-10-24T06:32:04.393769+00:00",
+  "updated_at": "2026-10-25T07:12:53.737948+00:00",
   "policy": {
     "output": "Reels only",
     "sources": "أي منصة عامة مناسبة، منها Instagram وTikTok وYouTube، دون حصر",
