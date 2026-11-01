@@ -96,7 +96,9 @@ for id in audit['operations_tips_batch_ids']:
  assert 0<r['durationSeconds']<=60 and r['views']>=100000 and r['capturedAt']
  assert r['brand']!='decoyreport' and not r['animationVerified'] and r['visualStyle']
  assert r['older'] and r['visualSampleSeconds'] and r['factCheckLinks']
- assert not r.get('selectedWeek') and not r.get('producedWeek')
+ if r.get('selectedWeek'):
+  assert id=='bOEUyr63h_k' and r['selectedWeek']==2 and r['productionState']=='proposed'
+ assert not r.get('producedWeek')
 print('PASS: new non-decoy financial Shorts, actual visual style, dated views and preserved production history.')
 
 # Company research is evidence-backed and never changes the existing production ledger.
@@ -140,3 +142,22 @@ assert len([r for r in rows if r['id']=='Dd8J1LcSaTP'])==1
 assert len([r for r in rows if r['id']=='DeICJ7cTS--'])==1
 assert '<option value="seeds">' in page and "get('review')==='seeds'" in page
 print('PASS: owner seeds, sampled motion, uncertain engagement, deduplication and source links.')
+
+# W002 preserves the complete source library and separates proposals from production.
+assert len(rows)==94 and len(eligible)==67
+assert set(audit['weekly_batch_ids'])=={'DfKErm-MuAR','DfF4ncwMGAG','Dez7qxrsRNi','bOEUyr63h_k'}
+for id in audit['weekly_batch_ids']:
+ r=lookup[id]
+ assert r['weeklyBatch']=='W002' and r['selectedWeek']==2
+ assert r['productionState']=='proposed' and r['producedWeek'] is None and r['publishedWeek'] is None
+ assert r['weeklyIdea']['example'] and r['weeklyIdea']['measure'] and r['weeklyIdea']['duplicateReview']
+ assert r['teachingEligible'] and r['contentLanguage']=='en' and r['visibleEligible']
+assert len([x for x in registry['ideas'] if x['selected_week']==2])==4
+assert next(x for x in registry['weeks'] if x['number']==2)['period_start']=='2026-11-01'
+assert lookup['bOEUyr63h_k']['published'].startswith('2022') and lookup['bOEUyr63h_k']['older']
+assert '<option value="w002">' in page and "get('review')==='w002'" in page
+assert 'id="week-1"' in page and 'id="week-2"' in page
+for r in rows[:91]:
+ assert r['metricObservations'][-1]['at'].startswith('2026-11-01') and r['metricsRefreshNote']
+ if r['latestMetricReview']=='refreshed':assert r['capturedAt'].startswith('2026-11-01')
+print('PASS: W002 proposal provenance, archive reuse, all91 saved-ID observations and hidden records.')
