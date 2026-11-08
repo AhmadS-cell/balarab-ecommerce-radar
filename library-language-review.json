@@ -1,7 +1,7 @@
 {
-  "checked_at": "2026-11-01T07:20:48.355895+00:00",
-  "archived_total": 94,
-  "eligible_count": 67,
+  "checked_at": "2026-11-08T13:42:42.432219+00:00",
+  "archived_total": 96,
+  "eligible_count": 69,
   "hidden_count": 27,
   "retained_original_ids": [
     "Desit-9opB-",
@@ -99,10 +99,12 @@
     "DeXEiZTTGWl",
     "DfKErm-MuAR",
     "DfF4ncwMGAG",
-    "Dez7qxrsRNi"
+    "Dez7qxrsRNi",
+    "DfSbF3njB1z",
+    "DfXqH7bK9gy"
   ],
   "language_counts": {
-    "en": 83,
+    "en": 85,
     "mixed": 6,
     "unknown": 5
   },
@@ -305,5 +307,9 @@
     "DfF4ncwMGAG",
     "Dez7qxrsRNi",
     "bOEUyr63h_k"
+  ],
+  "week_3_ids": [
+    "DfSbF3njB1z",
+    "DfXqH7bK9gy"
   ]
 }

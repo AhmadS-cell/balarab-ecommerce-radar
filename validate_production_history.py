@@ -144,7 +144,7 @@ assert '<option value="seeds">' in page and "get('review')==='seeds'" in page
 print('PASS: owner seeds, sampled motion, uncertain engagement, deduplication and source links.')
 
 # W002 preserves the complete source library and separates proposals from production.
-assert len(rows)==94 and len(eligible)==67
+assert len(rows)==audit["archived_total"] and len(eligible)==audit["eligible_count"]
 assert set(audit['weekly_batch_ids'])=={'DfKErm-MuAR','DfF4ncwMGAG','Dez7qxrsRNi','bOEUyr63h_k'}
 for id in audit['weekly_batch_ids']:
  r=lookup[id]
@@ -158,6 +158,28 @@ assert lookup['bOEUyr63h_k']['published'].startswith('2022') and lookup['bOEUyr6
 assert '<option value="w002">' in page and "get('review')==='w002'" in page
 assert 'id="week-1"' in page and 'id="week-2"' in page
 for r in rows[:91]:
- assert r['metricObservations'][-1]['at'].startswith('2026-11-01') and r['metricsRefreshNote']
- if r['latestMetricReview']=='refreshed':assert r['capturedAt'].startswith('2026-11-01')
+ assert any(o['at'].startswith('2026-11-01') for o in r['metricObservations']) and r['metricsRefreshNote']
+ if r['latestMetricReview']=='refreshed':assert r['capturedAt']==r['metricObservations'][-1]['at']
 print('PASS: W002 proposal provenance, archive reuse, all91 saved-ID observations and hidden records.')
+
+# W003 distinguishes comparative engagement from useful visual inspiration.
+assert len(rows)==96 and len(eligible)==69
+assert set(audit['week_3_ids'])=={'DfSbF3njB1z','DfXqH7bK9gy'}
+assert len([x for x in registry['ideas'] if x['selected_week']==3])==2
+for id in audit['week_3_ids']:
+ r=lookup[id];q=r['quality_assessment']
+ assert r['selectedWeek']==3 and r['weeklyBatch']=='W003' and r['productionState']=='proposed'
+ assert r['producedWeek'] is None and r['publishedWeek'] is None
+ assert r['contentLanguage']=='en' and r['teachingEligible'] and r['animationVerified']
+ assert r['visualSampleSeconds']==[3,18,32,50]
+ assert r['weeklyIdea']['factCheckLinks'] and r['weeklyIdea']['duplicateReview'] and r['weeklyIdea']['measure']
+ assert q['fit_status']=='fits_client' and q['observed_at']=='2026-11-08'
+ if q['status']=='strong_candidate':
+  p=q['peers'];assert len(p)>=5 and all(x['id']!=id and x['creator']==r['author'] and x['observed_at']==q['observed_at'] for x in p)
+  assert q['metric_snapshot']==r['likes']+r['comments']
+  assert q['metric_snapshot']>=2*statistics.median(x['metric_value'] for x in p)
+assert lookup['DfSbF3njB1z']['quality_assessment']['status']=='strong_candidate'
+assert lookup['DfXqH7bK9gy']['quality_assessment']['status']=='visual_reference'
+for r in rows[:94]:assert r['metricObservations'][-1]['at']=='2026-11-08' and r['metricsRefreshNote']
+assert 'id="week-2-section"' in page and 'id="week-3"' in page and "get('review')==='w003'" in page
+print('PASS: W003 proposal-only status, engagement evidence, English teaching, preservation and dated refresh.')
