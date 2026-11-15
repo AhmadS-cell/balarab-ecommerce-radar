@@ -163,7 +163,8 @@ for r in rows[:91]:
 print('PASS: W002 proposal provenance, archive reuse, all91 saved-ID observations and hidden records.')
 
 # W003 distinguishes comparative engagement from useful visual inspiration.
-assert len(rows)==96 and len(eligible)==69
+assert len(rows)==audit['archived_total'] and len(eligible)==audit['eligible_count']
+assert len([r for r in rows if r.get('weeklyBatch')=='W003'])==2
 assert set(audit['week_3_ids'])=={'DfSbF3njB1z','DfXqH7bK9gy'}
 assert len([x for x in registry['ideas'] if x['selected_week']==3])==2
 for id in audit['week_3_ids']:
@@ -176,10 +177,30 @@ for id in audit['week_3_ids']:
  assert q['fit_status']=='fits_client' and q['observed_at']=='2026-11-08'
  if q['status']=='strong_candidate':
   p=q['peers'];assert len(p)>=5 and all(x['id']!=id and x['creator']==r['author'] and x['observed_at']==q['observed_at'] for x in p)
-  assert q['metric_snapshot']==r['likes']+r['comments']
+  o=next(x for x in r['metricObservations'] if x['at']=='2026-11-08');assert q['metric_snapshot']==o['likes']+o['comments']
   assert q['metric_snapshot']>=2*statistics.median(x['metric_value'] for x in p)
 assert lookup['DfSbF3njB1z']['quality_assessment']['status']=='strong_candidate'
 assert lookup['DfXqH7bK9gy']['quality_assessment']['status']=='visual_reference'
-for r in rows[:94]:assert r['metricObservations'][-1]['at']=='2026-11-08' and r['metricsRefreshNote']
+for r in rows[:94]:assert any(o['at']=='2026-11-08' for o in r['metricObservations']) and r['metricsRefreshNote']
 assert 'id="week-2-section"' in page and 'id="week-3"' in page and "get('review')==='w003'" in page
 print('PASS: W003 proposal-only status, engagement evidence, English teaching, preservation and dated refresh.')
+
+# W004 appends useful English teaching references without claiming broad reach.
+assert len(rows)==98 and len(eligible)==71
+assert set(audit['week_4_ids'])=={'DfuzRgmqQ2w','Dft23Hms9xI'}
+assert len([x for x in registry['ideas'] if x['selected_week']==4])==2
+assert next(x for x in registry['weeks'] if x['number']==4)['period_start']=='2026-11-15'
+for id in audit['week_4_ids']:
+ r=lookup[id]
+ assert r['weeklyBatch']=='W004' and r['selectedWeek']==4 and r['productionState']=='proposed'
+ assert r['producedWeek'] is None and r['publishedWeek'] is None
+ assert r['teachingEligible'] and r['contentLanguage']=='en' and r['visibleEligible']
+ assert r['visualSampleSeconds'] and r['weeklyIdea']['factCheckLinks'] and r['weeklyIdea']['measure']
+ assert r['quality_assessment']['status']=='visual_reference'
+ assert r['qualityAssessmentCurrent'] and r['capturedAt']=='2026-11-15'
+for r in rows[:96]:
+ assert r['metricObservations'][-1]['at']=='2026-11-15'
+ assert r['metricsRefreshNote']
+assert 'id="week-3-section"' in page and 'id="week-4"' in page
+assert "get('review')==='w004'" in page and '<option value="w004">' in page
+print('PASS: W004 preservation, English teaching, limited reach, dated refresh and proposal-only states.')
