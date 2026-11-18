@@ -186,9 +186,9 @@ assert 'id="week-2-section"' in page and 'id="week-3"' in page and "get('review'
 print('PASS: W003 proposal-only status, engagement evidence, English teaching, preservation and dated refresh.')
 
 # W004 appends useful English teaching references without claiming broad reach.
-assert len(rows)==98 and len(eligible)==71
+assert len(rows)==audit['archived_total'] and len(eligible)==audit['eligible_count']
 assert set(audit['week_4_ids'])=={'DfuzRgmqQ2w','Dft23Hms9xI'}
-assert len([x for x in registry['ideas'] if x['selected_week']==4])==2
+assert len([x for x in registry['ideas'] if x['selected_week']==4])>=2
 assert next(x for x in registry['weeks'] if x['number']==4)['period_start']=='2026-11-15'
 for id in audit['week_4_ids']:
  r=lookup[id]
@@ -204,3 +204,27 @@ for r in rows[:96]:
 assert 'id="week-3-section"' in page and 'id="week-4"' in page
 assert "get('review')==='w004'" in page and '<option value="w004">' in page
 print('PASS: W004 preservation, English teaching, limited reach, dated refresh and proposal-only states.')
+
+# Targeted source expansion18November preserves all earlier source and idea records.
+assert len(rows)==103 and len(eligible)==76
+added={'DfvWPhWI4Sz','Dfp2HSAIQ03','DfxFZtvsBJG','DfpQxlxOK90','Dfm990dBBih'}
+assert set(audit['source_review_batches']['SOURCE-20261118'])==added
+newids={'BR-W004-03','BR-W004-04','BR-W004-05'}
+assert {x['idea_id'] for x in registry['ideas'] if x['idea_id'] in newids}==newids
+assert len([x for x in registry['ideas'] if x['selected_week']==4])==5
+for id in added:
+ r=lookup[id]
+ assert r['contentLanguage']=='en' and r['teachingEligible'] and r['visibleEligible']
+ assert r['sourceBatch']=='SOURCE-20261118' and r['producedWeek'] is None and r['publishedWeek'] is None
+ assert r['capturedAt']=='2026-11-18' and r['visualSampleSeconds'] and r['weeklyIdea']['factCheckLinks']
+ if r['ideaId']:assert r['productionState']=='proposed'
+ else:assert r['productionState']=='reference_only'
+for id in ['DfxFZtvsBJG','DfpQxlxOK90']:
+ assert lookup[id]['comments'] is None and lookup[id]['rawReportedComments']==0
+ assert lookup[id]['uiObservedComments']>0
+for id in ['DfvWPhWI4Sz','Dfp2HSAIQ03']:
+ q=lookup[id]['quality_assessment']
+ assert q['status']=='strong_candidate' and len(q['peers'])>=5
+ assert q['metric_snapshot']>=2*statistics.median(x['metric_value'] for x in q['peers'])
+assert 'id="source-review-18"' in page and '<option value="sources18">' in page
+print('PASS: targeted18November additions, comparative evidence, unknown conflicting counts and proposal-only states.')
