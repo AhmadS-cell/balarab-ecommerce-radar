@@ -859,5 +859,50 @@
       "publication_date": null,
       "added_at": "2026-11-18"
     }
+  ],
+  "content_usage": [
+    {
+      "idea_id": "RA-201",
+      "topic_key": "product-evaluation-dimensions-sofa",
+      "title": "عجبتك الكنبة، بس بتناسب بيتك؟",
+      "idea_used": true,
+      "usage_label": "استُخدمت الفكرة",
+      "first_used_on": "2026-11-18",
+      "usage_basis": "Prepared and explicitly approved LinkedIn package carousel-v5; currently scheduled. Owner selected this sofa idea for the next Reel on2026-11-19.",
+      "sources": [
+        {
+          "url": "https://www.youtube.com/watch?v=xKF12JtZz-4&t=803s",
+          "role": "Existing idea's original Shopify Masters reference; archived transcript review13:23–16:27."
+        },
+        {
+          "url": "https://baymard.com/research-articles/dimensions-measurements-product-size-image",
+          "role": "Existing sofa dimension-image evidence."
+        }
+      ],
+      "outputs": [
+        {
+          "platform": "LinkedIn",
+          "format": "document_post",
+          "state": "approved_scheduled",
+          "revision": "carousel-v5",
+          "approved_on": "2026-11-18",
+          "current_publication_state": "not_currently_live"
+        },
+        {
+          "platform": "Instagram",
+          "format": "Reel",
+          "state": "selected_in_preparation",
+          "selected_on": "2026-11-19",
+          "script_approved": false,
+          "produced": false,
+          "published": false,
+          "scheduled": false
+        }
+      ],
+      "owner_instruction": "من الرادار، اختر اللي نعملها، وحط عليها إشارة واضحة إنها الفكرة استعملناها.",
+      "prevents_duplicate_ideation": true,
+      "scope": "Records reuse of a prepared idea and selection for a Reel; does not claim a completed Reel or authorize new social publication.",
+      "updated_at": "2026-11-19"
+    }
   ]
 }
