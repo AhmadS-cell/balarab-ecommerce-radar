@@ -45,6 +45,15 @@
           "reference_only": 2
         }
       ]
+    },
+    {
+      "number": 5,
+      "id": "W005",
+      "prepared_on": "2026-11-22",
+      "period_start": "2026-11-22",
+      "period_end": "2026-11-28",
+      "label": "الأسبوع الخامس",
+      "note": "أربع أفكار تعليمية، بمقارنة مشاهدات داخل الحساب. لا ادعاء فايرل أو إنتاج أو نشر."
     }
   ],
   "ideas": [
@@ -402,17 +411,17 @@
       "idea_id": "BR-W002-02",
       "topic_key": "free-extra-versus-discount-unit-economics",
       "title": "الإضافة المجانية: قيمة للعميل وحسبة للمتجر",
-      "state": "proposed",
-      "label": "مقترح بحثي للمراجعة؛ لم يعتمد أو ينتج أو ينشر",
+      "state": "approved_scheduled",
+      "label": "أنتج واعتمدv7ومجدول؛ لم ينشر بعد",
       "format": "Reel",
       "selected_week": 2,
       "first_seen_week": 2,
-      "produced_week": null,
+      "produced_week": 4,
       "published_week": null,
       "source_url": "https://www.instagram.com/reel/DfF4ncwMGAG/",
       "source_platform": "instagram",
       "source_id": "DfF4ncwMGAG",
-      "last_checked": "2026-11-01T07:20:48.355895+00:00",
+      "last_checked": "2026-11-22",
       "hook": "هدية بـ3ريالات أو خصم10ريالات: أي عرض يناسب طلب متجرك؟",
       "brief": "نفتح على طلب عطر وسعره150ريالًا: التاجر يفكر بخصم10ريالات، ثم نرى بديل عينة مفيدة تكلفته الإجمالية3ريالات. نتابع الفرق في المتبقي ثم نسأل هل يفيد العميل فعلًا وهل غيّر عدد الطلبات. لا نحكم من التكلفة وحدها؛ التحويل وتكلفة الشحن والعميل المقصود يحددون الاختبار.",
       "measure": "المتبقي بعد كل التكاليف المتغيرة لكل100زيارة، وقبول العرض وتكلفة التغليف والشحن. فرق الهامش وحده لا يكفي.",
@@ -435,6 +444,18 @@
           "type": "source_observed_again",
           "week": 4,
           "basis": "مراجعة أسبوعية للمصدر وحفظ الحالة السابقة؛ لا اختيار جديد أو تكليف مكرر. الخطة الحية قرئت حتى الصف70."
+        },
+        {
+          "at": "2026-11-22",
+          "type": "observed_again",
+          "week": 5,
+          "basis": "ظهر المصدر المحفوظ مجددًا؛ لا اختيار إنتاج مكرر."
+        },
+        {
+          "at": "2026-11-22",
+          "type": "existing_production_verified",
+          "week": 5,
+          "basis": "راجعنا التسليم المعتمد الحالي والخطة الحية: إنتاجv7واعتماد21نوفمبر والجدولة مسجلان؛ ليس نشرًا أو نتيجة تجربة."
         }
       ]
     },
@@ -476,6 +497,12 @@
           "type": "source_observed_again",
           "week": 4,
           "basis": "مراجعة أسبوعية للمصدر وحفظ الحالة السابقة؛ لا اختيار جديد أو تكليف مكرر. الخطة الحية قرئت حتى الصف70."
+        },
+        {
+          "at": "2026-11-22",
+          "type": "observed_again",
+          "week": 5,
+          "basis": "ظهر المصدر المحفوظ مجددًا؛ لا اختيار إنتاج مكرر."
         }
       ]
     },
@@ -587,6 +614,12 @@
           "type": "source_recheck_attempted",
           "week": 4,
           "basis": "مراجعة أسبوعية للمصدر وحفظ الحالة السابقة؛ لا اختيار جديد أو تكليف مكرر. الخطة الحية قرئت حتى الصف70."
+        },
+        {
+          "at": "2026-11-22",
+          "type": "observed_again",
+          "week": 5,
+          "basis": "ظهر المصدر المحفوظ مجددًا؛ لا اختيار إنتاج مكرر."
         }
       ]
     },
@@ -674,6 +707,12 @@
           "type": "selected_for_week",
           "week": 4,
           "basis": "إضافة بحث مستهدف18نوفمبر؛ مقترح فقط بعدفحص الخطةوالسجل."
+        },
+        {
+          "at": "2026-11-22",
+          "type": "observed_again",
+          "week": 5,
+          "basis": "ظهر المصدر المحفوظ مجددًا؛ لا اختيار إنتاج مكرر."
         }
       ]
     },
@@ -703,6 +742,12 @@
           "type": "selected_for_week",
           "week": 4,
           "basis": "إضافة بحث مستهدف18نوفمبر؛ مقترح فقط بعدفحص الخطةوالسجل."
+        },
+        {
+          "at": "2026-11-22",
+          "type": "observed_again",
+          "week": 5,
+          "basis": "ظهر المصدر المحفوظ مجددًا؛ لا اختيار إنتاج مكرر."
         }
       ]
     },
@@ -732,11 +777,133 @@
           "type": "selected_for_week",
           "week": 4,
           "basis": "إضافة بحث مستهدف18نوفمبر؛ مقترح فقط بعدفحص الخطةوالسجل."
+        },
+        {
+          "at": "2026-11-22",
+          "type": "observed_again",
+          "week": 5,
+          "basis": "ظهر المصدر المحفوظ مجددًا؛ لا اختيار إنتاج مكرر."
+        }
+      ]
+    },
+    {
+      "id": "DfwVVFiNpZf",
+      "idea_id": "BR-W005-01",
+      "topic_key": "scan-key-specs-before-full-spec-table",
+      "title": "مواصفات كثيرة، والجواب المهم وينه؟",
+      "state": "proposed",
+      "label": "مقترح للمراجعة؛ لم يعتمد أو ينتج أو ينشر",
+      "format": "Reel",
+      "selected_week": 5,
+      "first_seen_week": 5,
+      "produced_week": null,
+      "published_week": null,
+      "source_url": "https://www.instagram.com/reel/DfwVVFiNpZf/",
+      "source_platform": "instagram",
+      "source_id": "DfwVVFiNpZf",
+      "last_checked": "2026-11-22",
+      "hook": "كل مواصفات المكنسة عندك، بس عميلك يلقى الجواب اللي يبيه؟",
+      "brief": "متجر مكانس روبوت: عميل يريد معرفة ارتفاع الجهاز وهل يلائم المساحة تحت الأثاث. نراه يبحث في جدول طويل، ثم نرتب أهم معلومات القرار في ملخص قبل التفاصيل، ونعيد نفس المهمة.",
+      "measure": "اختبار العثور على مواصفة بعينها: صحة الإجابة والوقت والتراجع لصفحة أخرى. عند تجربة لاحقة راقب الإضافة والشراء والإرجاع مع ثبات المنتج والسعر.",
+      "duplicate_review": "راجعت سجل 16 فكرة والخطة الحية حتى صف الكنبة والهدية. سؤال توافق السماعة الموجود في الخطة يعالج نقص معلومة التوافق؛ هذه زاوية ترتيب جدول مواصفات طويل مع بقاء المعلومة موجودة. لا نعيد كتابة وصف القيمة أو ريل الكنبة أو تكليف التصوير.",
+      "events": [
+        {
+          "at": "2026-11-22",
+          "type": "selected_for_week",
+          "week": 5,
+          "basis": "نصيحة إنجليزية مباشرة مع عينات بصرية وفحص السجل والخطة؛ مقترح فقط."
+        }
+      ]
+    },
+    {
+      "id": "DfzDVl6oTYY",
+      "idea_id": "BR-W005-02",
+      "topic_key": "fit-feedback-summary-with-size-guide",
+      "title": "المقاس بالأرقام، وكيف يجي على العميل؟",
+      "state": "proposed",
+      "label": "مقترح للمراجعة؛ لم يعتمد أو ينتج أو ينشر",
+      "format": "Reel",
+      "selected_week": 5,
+      "first_seen_week": 5,
+      "produced_week": null,
+      "published_week": null,
+      "source_url": "https://www.instagram.com/reel/DfzDVl6oTYY/",
+      "source_platform": "instagram",
+      "source_id": "DfzDVl6oTYY",
+      "last_checked": "2026-11-22",
+      "hook": "عميلك يعرف مقاسه، بس يعرف هالحذاء كيف يجي عليه؟",
+      "brief": "متجر أحذية مشي: عميل متردد بين مقاسين. يبدأ من جدول القياسات، ثم يرى ملاحظات أصحاب الموديل نفسه عن الضيق والاتساع، ويعرف كيف يستخدمها دون اعتبارها ضمانًا لمقاسه.",
+      "measure": "نجاح مهمة اختيار مبني على القياسات وفهم الملاحظات، والأسئلة المتبقية. لاحقًا راقب أخطاء المقاس والمرتجعات حسب الموديل وحجم العينة.",
+      "duplicate_review": "BR-W004-03 يعالج ظهور المقاسات وتوفرها؛ هذه الفكرة تعالج بيانات الملاءمة من المشترين مع جدول القياس. لا نكرر زوايا أبعاد الكنبة RA-201 أو تصوير الملابس على الموديل؛ مرجع التصوير يظل مستقلًا.",
+      "events": [
+        {
+          "at": "2026-11-22",
+          "type": "selected_for_week",
+          "week": 5,
+          "basis": "نصيحة إنجليزية مباشرة مع عينات بصرية وفحص السجل والخطة؛ مقترح فقط."
+        }
+      ]
+    },
+    {
+      "id": "Df2CqH6veLZ",
+      "idea_id": "BR-W005-03",
+      "topic_key": "guest-checkout-mobile-visibility",
+      "title": "الدفع كضيف موجود، بس ظاهر على الجوال؟",
+      "state": "proposed",
+      "label": "مقترح للمراجعة؛ لم يعتمد أو ينتج أو ينشر",
+      "format": "Reel",
+      "selected_week": 5,
+      "first_seen_week": 5,
+      "produced_week": null,
+      "published_week": null,
+      "source_url": "https://www.instagram.com/reel/Df2CqH6veLZ/",
+      "source_platform": "instagram",
+      "source_id": "Df2CqH6veLZ",
+      "last_checked": "2026-11-22",
+      "hook": "متجرك يسمح بالدفع كضيف، بس عميل الجوال يشوف هالخيار؟",
+      "brief": "متجر أدوات قهوة: عميل وصل للدفع بطاحونة، فيظن أنه يحتاج حسابًا. نكشف خيار الضيف المخفي ثم نعيد ترتيب بداية الدفع على الجوال ونكمل نفس الطلب.",
+      "measure": "هل يرى المشارك خيار الضيف من البداية؟ زمن الوصول للدفع وأخطاء التنقل. لاحقًا قارن إتمام الدفع مع سلامة بيانات الطلب، دون تغيير بقية التجربة.",
+      "duplicate_review": "الخطة تتضمن رسائل الخطأ والحقل الاختياري وخانة الكوبون؛ لم نجد تكليفًا بالزاوية نفسها عن ظهور الضيف على الهاتف. لا نعيد اختبار توقيت البوب أب أو نموذج الحقول العامة.",
+      "events": [
+        {
+          "at": "2026-11-22",
+          "type": "selected_for_week",
+          "week": 5,
+          "basis": "نصيحة إنجليزية مباشرة مع عينات بصرية وفحص السجل والخطة؛ مقترح فقط."
+        }
+      ]
+    },
+    {
+      "id": "DgAgJPJhj-K",
+      "idea_id": "BR-W005-04",
+      "topic_key": "dismissible-promotional-overlay",
+      "title": "نافذة متجرك فتحت، يعرف العميل يسكرها؟",
+      "state": "proposed",
+      "label": "مقترح للمراجعة؛ لم يعتمد أو ينتج أو ينشر",
+      "format": "Reel",
+      "selected_week": 5,
+      "first_seen_week": 5,
+      "produced_week": null,
+      "published_week": null,
+      "source_url": "https://www.instagram.com/reel/DgAgJPJhj-K/",
+      "source_platform": "instagram",
+      "source_id": "DgAgJPJhj-K",
+      "last_checked": "2026-11-22",
+      "hook": "نافذة متجرك فتحت، بس عميلك يعرف يسكرها؟",
+      "brief": "متجر منظمات منزلية: عميل يريد فتح صورة تفصيل، فتغطيها نافذة اشتراك. نحاول إغلاقها، ثم نوضح زر الخروج ونعود للصورة المطلوبة في الرحلة نفسها.",
+      "measure": "نجاح إغلاق النافذة والعودة للمهمة، والنقرات الخاطئة ومغادرة الصفحة. لاحقًا قارن إتمام المهمة والشراء مع الاشتراكات؛ لا تجعل التسجيل وحده معيار النجاح.",
+      "duplicate_review": "الخطة الحية تعالج توقيت نافذة الخصم؛ هذه زاوية قابلية الإغلاق بعد ظهور نافذة غير حرجة، وليست إعادة لنفس توقيت العرض. تختلف عن تأكيد إضافة المنتج للسلة BR-W004-04.",
+      "events": [
+        {
+          "at": "2026-11-22",
+          "type": "selected_for_week",
+          "week": 5,
+          "basis": "نصيحة إنجليزية مباشرة مع عينات بصرية وفحص السجل والخطة؛ مقترح فقط."
         }
       ]
     }
   ],
-  "updated_at": "2026-11-18T10:53:04.037569+00:00",
+  "updated_at": "2026-11-22",
   "policy": {
     "output": "Reels only",
     "sources": "أي منصة عامة مناسبة، منها Instagram وTikTok وYouTube، دون حصر",
@@ -780,6 +947,24 @@
         "BR-W004-05"
       ],
       "note": "3زوايا جديدة ومصدران داعمان لموضوعين قائمين؛ دون إنتاج أونشر اجتماعي."
+    },
+    {
+      "batch": "W005",
+      "date": "2026-11-22",
+      "selected_source_ids": [
+        "DfwVVFiNpZf",
+        "DfzDVl6oTYY",
+        "Df2CqH6veLZ",
+        "DgAgJPJhj-K"
+      ],
+      "resource_attempt_count": 105,
+      "coverage_status": {
+        "partial": 66,
+        "unavailable": 39,
+        "reviewed_with_suitable_new": 0,
+        "reviewed_no_suitable_new": 0
+      },
+      "note": "كل الموارد حاولنا الوصول إليها؛ القائمة أوRSS الجزئية ليست مراجعة كاملة. حالات الاستخدام والإنتاج السابقة محفوظة."
     }
   ],
   "recommended_concepts": [
@@ -891,18 +1076,27 @@
         {
           "platform": "Instagram",
           "format": "Reel",
-          "state": "selected_in_preparation",
+          "state": "approved_scheduled",
           "selected_on": "2026-11-19",
-          "script_approved": false,
-          "produced": false,
+          "script_approved": true,
+          "produced": true,
           "published": false,
-          "scheduled": false
+          "scheduled": true,
+          "revision": "v7",
+          "scheduled_for": "2026-11-23T21:00:00+03:00"
         }
       ],
       "owner_instruction": "من الرادار، اختر اللي نعملها، وحط عليها إشارة واضحة إنها الفكرة استعملناها.",
       "prevents_duplicate_ideation": true,
       "scope": "Records reuse of a prepared idea and selection for a Reel; does not claim a completed Reel or authorize new social publication.",
-      "updated_at": "2026-11-19"
+      "updated_at": "2026-11-22",
+      "history": [
+        {
+          "at": "2026-11-22",
+          "event": "current_delivery_and_live_plan_verified",
+          "basis": "الكنبةv7معتمدة ومجدولة؛ لم تنشر بعد. المصباح يبقى مؤجلًا."
+        }
+      ]
     }
   ]
 }

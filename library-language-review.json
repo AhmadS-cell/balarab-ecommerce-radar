@@ -1,7 +1,7 @@
 {
   "checked_at": "2026-11-18T07:10:58.452587+00:00",
-  "archived_total": 103,
-  "eligible_count": 76,
+  "archived_total": 107,
+  "eligible_count": 80,
   "hidden_count": 27,
   "retained_original_ids": [
     "Desit-9opB-",
@@ -331,5 +331,42 @@
       "DfpQxlxOK90",
       "Dfm990dBBih"
     ]
-  }
+  },
+  "week_5_ids": [
+    "DfwVVFiNpZf",
+    "DfzDVl6oTYY",
+    "Df2CqH6veLZ",
+    "DgAgJPJhj-K"
+  ],
+  "weekly_review_history": [
+    {
+      "date": "2026-11-22",
+      "week": "W005",
+      "new_ids": [
+        "DfwVVFiNpZf",
+        "DfzDVl6oTYY",
+        "Df2CqH6veLZ",
+        "DgAgJPJhj-K"
+      ],
+      "refreshed_ids": [
+        "Dew5XCMO8mz",
+        "DeunCroOzES",
+        "DeznS2YO-_9",
+        "DejxX2ZOSIV",
+        "Dee8KhGhh_e",
+        "DeICJ7cTS--",
+        "DeOBTsOIedf",
+        "DeSJoypNRLx",
+        "DeXEiZTTGWl",
+        "DfF4ncwMGAG",
+        "Dez7qxrsRNi",
+        "DfXqH7bK9gy",
+        "DfvWPhWI4Sz",
+        "Dfp2HSAIQ03",
+        "DfxFZtvsBJG",
+        "Dfm990dBBih"
+      ],
+      "refresh_scope": "Only IDs encountered in current feeds; other snapshots retain their actual observation dates."
+    }
+  ]
 }

@@ -149,7 +149,7 @@ assert set(audit['weekly_batch_ids'])=={'DfKErm-MuAR','DfF4ncwMGAG','Dez7qxrsRNi
 for id in audit['weekly_batch_ids']:
  r=lookup[id]
  assert r['weeklyBatch']=='W002' and r['selectedWeek']==2
- assert r['productionState']=='proposed' and r['producedWeek'] is None and r['publishedWeek'] is None
+ assert (r['productionState']=='approved_scheduled' and r['producedWeek']==4 and r['publishedWeek'] is None) if id=='DfF4ncwMGAG' else (r['productionState']=='proposed' and r['producedWeek'] is None and r['publishedWeek'] is None)
  assert r['weeklyIdea']['example'] and r['weeklyIdea']['measure'] and r['weeklyIdea']['duplicateReview']
  assert r['teachingEligible'] and r['contentLanguage']=='en' and r['visibleEligible']
 assert len([x for x in registry['ideas'] if x['selected_week']==2])==4
@@ -197,16 +197,16 @@ for id in audit['week_4_ids']:
  assert r['teachingEligible'] and r['contentLanguage']=='en' and r['visibleEligible']
  assert r['visualSampleSeconds'] and r['weeklyIdea']['factCheckLinks'] and r['weeklyIdea']['measure']
  assert r['quality_assessment']['status']=='visual_reference'
- assert r['qualityAssessmentCurrent'] and r['capturedAt']=='2026-11-15'
+ assert any(o['at']=='2026-11-15' for o in r['metricObservations'])
 for r in rows[:96]:
- assert r['metricObservations'][-1]['at']=='2026-11-15'
+ assert any(o['at']=='2026-11-15' for o in r['metricObservations'])
  assert r['metricsRefreshNote']
 assert 'id="week-3-section"' in page and 'id="week-4"' in page
 assert "get('review')==='w004'" in page and '<option value="w004">' in page
 print('PASS: W004 preservation, English teaching, limited reach, dated refresh and proposal-only states.')
 
 # Targeted source expansion18November preserves all earlier source and idea records.
-assert len(rows)==103 and len(eligible)==76
+assert len(rows)>=103 and len(eligible)>=76
 added={'DfvWPhWI4Sz','Dfp2HSAIQ03','DfxFZtvsBJG','DfpQxlxOK90','Dfm990dBBih'}
 assert set(audit['source_review_batches']['SOURCE-20261118'])==added
 newids={'BR-W004-03','BR-W004-04','BR-W004-05'}
@@ -216,7 +216,7 @@ for id in added:
  r=lookup[id]
  assert r['contentLanguage']=='en' and r['teachingEligible'] and r['visibleEligible']
  assert r['sourceBatch']=='SOURCE-20261118' and r['producedWeek'] is None and r['publishedWeek'] is None
- assert r['capturedAt']=='2026-11-18' and r['visualSampleSeconds'] and r['weeklyIdea']['factCheckLinks']
+ assert any(o['at']=='2026-11-18' for o in r['metricObservations']) and r['visualSampleSeconds'] and r['weeklyIdea']['factCheckLinks']
  if r['ideaId']:assert r['productionState']=='proposed'
  else:assert r['productionState']=='reference_only'
 for id in ['DfxFZtvsBJG','DfpQxlxOK90']:
@@ -228,3 +228,39 @@ for id in ['DfvWPhWI4Sz','Dfp2HSAIQ03']:
  assert q['metric_snapshot']>=2*statistics.median(x['metric_value'] for x in q['peers'])
 assert 'id="source-review-18"' in page and '<option value="sources18">' in page
 print('PASS: targeted18November additions, comparative evidence, unknown conflicting counts and proposal-only states.')
+
+# W005 uses relative views as descriptive evidence, without a fixed reach or ratio gate.
+assert len(rows)==107 and len(eligible)==80
+assert len(registry['ideas'])==20 and len([x for x in registry['ideas'] if x['selected_week']==5])==4
+assert set(audit['week_5_ids'])=={'DfwVVFiNpZf','DfzDVl6oTYY','Df2CqH6veLZ','DgAgJPJhj-K'}
+for id in audit['week_5_ids']:
+ r=lookup[id];q=r['quality_assessment'];peers=q['peers']
+ assert r['weeklyBatch']=='W005' and r['selectedWeek']==5 and r['productionState']=='proposed'
+ assert r['producedWeek'] is None and r['publishedWeek'] is None
+ assert r['contentLanguage']=='en' and r['teachingEligible'] and r['visibleEligible']
+ assert r['animationVerified'] and r['visualSampleSeconds'] and r['weeklyIdea']['factCheckLinks']
+ assert q['candidate_excluded'] and len(peers)==q['sample_n'] and all(x['id']!=id and x['creator']==r['author'] and x['platform']=='instagram' for x in peers)
+ assert statistics.median(x['views'] for x in peers)==q['median_views']
+ assert statistics.mean(x['views'] for x in peers)==q['mean_views']
+ assert r['weeklyIdea']['duplicateReview'] and r['weeklyIdea']['measure'] and len(r['hooks'])>=3
+assert lookup['Df2CqH6veLZ']['quality_assessment']['sample_n']==1
+assert 'id="week-5"' in page and '<option value="w005">' in page and "get('review')==='w005'" in page
+assert 'id="source-review-18-section"' in page
+assert 'id="photography-objects"' in page and 'id="photography-fashion-model"' in page
+assert next(x for x in registry['ideas'] if x['idea_id']=='BR-W002-02')['produced_week']==4
+assert lookup['DfF4ncwMGAG']['productionState']=='approved_scheduled' and lookup['DfF4ncwMGAG']['publishedWeek'] is None
+assert lookup['DefpY3hou6y']['productionState']!='approved_scheduled'
+tips=(root/'docs/tips.html').read_text(encoding='utf-8')
+t=json.loads(re.search(r'<script[^>]*id="tips-methods-data"[^>]*>(.*?)</script>',tips,re.S).group(1))
+assert len(t['methods'])==16 and len({m['method_id'] for m in t['methods']})==16
+assert t['inventory']['posts']==254 and t['inventory']['videos']==249 and t['inventory']['transcripts_reviewed']==14
+assert t['inventory']['inventory_only_videos']==235 and t['inventory']['visual_review_pending']==0
+for m in t['methods']:
+ assert m['experiment']['status']=='not_tested'
+ if m['method_id'] in ['TIP-003','TIP-004','TIP-009']:
+  assert m['experiment']['trials'][0]['trial_id']=='BR-EXP-GIFT-TIP004-20261120'
+  assert m['experiment']['trials'][0]['results'] is None
+  assert m['experiment']['phase']=='approved_scheduled_unmeasured'
+assert 'DfamuA6xFRK' in next(m for m in t['methods'] if m['method_id']=='TIP-006')['source_ids']
+assert '<meta name="robots" content="noindex' in tips
+print('PASS: W005 relative-view evidence, preservation, independent production stages and Tips trial history.')
