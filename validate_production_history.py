@@ -230,8 +230,8 @@ assert 'id="source-review-18"' in page and '<option value="sources18">' in page
 print('PASS: targeted18November additions, comparative evidence, unknown conflicting counts and proposal-only states.')
 
 # W005 uses relative views as descriptive evidence, without a fixed reach or ratio gate.
-assert len(rows)==107 and len(eligible)==80
-assert len(registry['ideas'])==20 and len([x for x in registry['ideas'] if x['selected_week']==5])==4
+assert len(rows)==110 and len(eligible)==83
+assert len(registry['ideas'])==21 and len([x for x in registry['ideas'] if x['selected_week']==5])==5
 assert set(audit['week_5_ids'])=={'DfwVVFiNpZf','DfzDVl6oTYY','Df2CqH6veLZ','DgAgJPJhj-K'}
 for id in audit['week_5_ids']:
  r=lookup[id];q=r['quality_assessment'];peers=q['peers']
@@ -264,3 +264,14 @@ for m in t['methods']:
 assert 'DfamuA6xFRK' in next(m for m in t['methods'] if m['method_id']=='TIP-006')['source_ids']
 assert '<meta name="robots" content="noindex' in tips
 print('PASS: W005 relative-view evidence, preservation, independent production stages and Tips trial history.')
+
+# Acuisight24November append keeps prior weekly selections and independent stages.
+assert set(audit["source_review_batches"]["ACUISIGHT-20261124"])=={"DgFRh8mtbUm","Df2Q8RwtM4m","Df9jWclt--z"}
+for source in audit["source_review_batches"]["ACUISIGHT-20261124"]:
+ r=lookup[source]
+ assert r["contentLanguage"]=="en" and r["teachingEligible"] and r["visibleEligible"]
+ assert r["producedWeek"] is None and r["publishedWeek"] is None
+assert lookup["DgFRh8mtbUm"]["productionState"]=="proposed"
+assert all(lookup[x]["productionState"]=="reference_only" for x in ["Df2Q8RwtM4m","Df9jWclt--z"])
+assert "id=\"acuisight-ideas\"" in page
+print("PASS: Acuisight source review and support-only deduplication.")

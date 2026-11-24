@@ -901,6 +901,40 @@
           "basis": "نصيحة إنجليزية مباشرة مع عينات بصرية وفحص السجل والخطة؛ مقترح فقط."
         }
       ]
+    },
+    {
+      "id": "DgFRh8mtbUm",
+      "idea_id": "BR-W005-05",
+      "topic_key": "organic-reels-screen-before-paid-validation",
+      "title": "قبل تموّل الريل، وش تعلّمت من نشره؟",
+      "state": "proposed",
+      "label": "مقترح جديد للمراجعة",
+      "format": "Reel",
+      "selected_week": 5,
+      "first_seen_week": 5,
+      "produced_week": null,
+      "published_week": null,
+      "source_url": "https://www.instagram.com/reel/DgFRh8mtbUm/",
+      "source_platform": "instagram",
+      "source_id": "DgFRh8mtbUm",
+      "last_checked": "2026-11-24",
+      "hook": "قبل تموّل هالريل، وش يقول لك أداؤه بدون إعلان؟",
+      "brief": "متجر منظمات مكتب: ثلاث زوايا لنفس منظّم الأسلاك، مشكلة تشابك الشواحن، عرض ترتيبها، وتجربة عميل حقيقية إذا توفرت. نراجع كيف أكمل الجمهور المشاهدة وما شاركه، ثم نختار مرشحًا لاختبار البيع.",
+      "measure": "قارن الاحتفاظ ونسبة المشاركات والحفظ إلى المشاهدات أو الوصول مع توحيد المقام وطول المقطع قدر الإمكان. مرحلة الإعلان تقاس بتكلفة الطلب المدفوع والمتبقي بعد التكاليف، لا التفاعل وحده.",
+      "duplicate_review": "فحصت107مراجع والسجل وخطةInstagramالحية G5:K90 يوم24نوفمبر. اختبار تنويعات الإعلان DePXxpwOh_6 قريب، لكن القرار هنا ترشيح فكرة من المحتوى العضوي قبل إثبات البيع باختبار مدفوع. لا نكرر ريل إيقاف الإعلان بالصف52.",
+      "events": [
+        {
+          "at": "2026-11-24T09:05:44.837437+00:00",
+          "type": "proposed_source_review",
+          "basis": "طلب أحمد مراجعةAcuisight؛ مقترح فقط دون إنتاج أو نشر."
+        },
+        {
+          "at": "2026-11-24",
+          "type": "selected_for_week",
+          "week": 5,
+          "basis": "Targeted owner-requested supplement; proposed, unapproved and unproduced."
+        }
+      ]
     }
   ],
   "updated_at": "2026-11-22",
@@ -927,6 +961,22 @@
       "added_at": "2026-11-18T07:10:58.452587+00:00",
       "state": "reference_only",
       "note": "يدعم مقال «كيف أكتب رسائل السلات المتروكة؟ أمثلة واتساب بدون خصم تلقائي» بالصف43 ومعرّفه القائم، ومرجع Dd8J1LcSaTP عن إعادة الاستهداف. لا فكرة إنتاج جديدة أو تعديل للمقال أو الأتمتة من هذا البحث."
+    },
+    {
+      "source_id": "Df2Q8RwtM4m",
+      "source_url": "https://www.instagram.com/reel/Df2Q8RwtM4m/",
+      "related_topic": "BR-W001-04؛ خطةInstagram الصف32: تكلفة الطلب الإضافي",
+      "added_at": "2026-11-24",
+      "state": "reference_only",
+      "note": "يتداخل مباشرة مع BR-W001-04 وخطةInstagramالصف32 عن تكلفة الطلب الإضافي؛ أضيف كمرجع داعم فقط. لا يفتح تكليف إنتاج جديدًا."
+    },
+    {
+      "source_id": "Df9jWclt--z",
+      "source_url": "https://www.instagram.com/reel/Df9jWclt--z/",
+      "related_topic": "خطةInstagram الصف52: قرار إيقاف اختبار الإعلان",
+      "added_at": "2026-11-24",
+      "state": "reference_only",
+      "note": "موضوع إيقاف الاختبار موجود ومُنفذ في خطةInstagramالصف52، وموضوع التكلفة المقبولة بالصف34. يحفظ مرجعًا داعمًا دون تكليف جديد أو تعديل نسخ معتمدة."
     }
   ],
   "source_reviews": [
@@ -965,6 +1015,19 @@
         "reviewed_no_suitable_new": 0
       },
       "note": "كل الموارد حاولنا الوصول إليها؛ القائمة أوRSS الجزئية ليست مراجعة كاملة. حالات الاستخدام والإنتاج السابقة محفوظة."
+    },
+    {
+      "date": "2026-11-24",
+      "batch": "ACUISIGHT-20261124",
+      "source_ids": [
+        "DgFRh8mtbUm",
+        "Df2Q8RwtM4m",
+        "Df9jWclt--z"
+      ],
+      "new_idea_ids": [
+        "BR-W005-05"
+      ],
+      "note": "فكرة جديدة ومرجعان داعمان؛ لا تعديل نسخ معتمدة أو تكليف إنتاج."
     }
   ],
   "recommended_concepts": [
